@@ -1,4 +1,4 @@
-#!/home/edemuner/Documents/code/python/django_rp_social_network/django-social/venv/bin/python3.9
+#!/home/edemuner/Documents/code/python/django_rp_social_network/django-social/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
