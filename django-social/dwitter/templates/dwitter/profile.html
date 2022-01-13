@@ -4,18 +4,66 @@
 
 {% block content %}
 
-<ul>
-    <p>Quem {{ profile.user.username }} segue:</p>
-    {% for following in profile.follows.all %}
-        <li>{{ following }}</li>
-    {% endfor %}
-</ul>
-    <br><br>
-<ul>
-    <p>Quem segue {{ profile.user.username }}:</p>
-    {% for follower in profile.followed_by.all %}
-        <p>{{ follower }}</p>
-    {% endfor %}
-</ul>
+<div class="columns">
+    <div class="column">
+
+        <div class="block">
+            <h1 class="title is-1">
+                Dweets de {{ profile.user.username|upper }}
+            </h1>
+        </div>
+    </div>
+
+
+    <div class="column is-one-third">
+
+        <div class=block>
+            <a href="#">
+                <button class="button is-dark is-outlined is-fullwidth">
+                    Todos os perfis
+                </button>
+            </a>
+        </div>
+
+
+        <div class="block">
+            <h3 class="title is-4">
+                Quem {{ profile.user.username }} segue:
+            </h3>
+            <div class="content">
+                <ul>
+                    {% for following in profile.follows.all %}
+                        <li>
+                            <a href="#">
+                                {{ following }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="block">
+            <h3 class="title is-4">
+                    Quem segue {{ profile.user.username }}:
+            </h3>
+            <div class="content">
+                <ul>
+                    {% for follower in profile.followed_by.all %}
+                        <li>
+                            <a href="#">
+                                {{ follower }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
 
 {% endblock content %}
