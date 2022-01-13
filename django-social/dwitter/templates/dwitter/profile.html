@@ -1,7 +1,21 @@
 <!-- dwitter/templates/dwitter/profile.html -->
 
+{% extends 'base.html' %}
+
+{% block content %}
+
 <ul>
+    <p>Quem {{ profile.user.username }} segue:</p>
     {% for following in profile.follows.all %}
-    <li>{{ following }}</li>
+        <li>{{ following }}</li>
     {% endfor %}
 </ul>
+    <br><br>
+<ul>
+    <p>Quem segue {{ profile.user.username }}:</p>
+    {% for follower in followers %}
+        <p>{{ follower }}</p>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
