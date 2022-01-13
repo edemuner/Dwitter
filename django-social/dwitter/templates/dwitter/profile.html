@@ -13,7 +13,7 @@
     <br><br>
 <ul>
     <p>Quem segue {{ profile.user.username }}:</p>
-    {% for follower in followers %}
+    {% for follower in profile.followed_by.all %}
         <p>{{ follower }}</p>
     {% endfor %}
 </ul>
