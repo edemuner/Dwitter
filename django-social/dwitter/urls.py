@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import dashboard, profile_list, profile
+from .views import dashboard, profile_list, profile, login
 
 app_name = "dwitter"
 

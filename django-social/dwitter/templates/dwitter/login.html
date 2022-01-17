@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<br><br>
 
-<h1>Login</h1>
+<h1 class="title is-1">Login</h1>
+<br><br>
 
 
     <form action="submit" method="POST">{% csrf_token %}
-         <div align="center">
+         <div class="column is-one-third">
 
-            <label>Usuário:</label>
-            <input type="text" name="username">
-
-            <label>Senha:</label>
-            <input type="password" name="password">
-
-            <button type="submit">Entrar</button>
+            <label class="title is-4">Usuário:</label>
+            <input class="input is-primary" type="text" placeholder="E-mail cadastrado conosco", name="username">
+            <br><br>
+            <label class="title is-4">Senha:</label>
+            <input class="input is-primary" type="password" placeholder="***********">
+            <br><br>
+            <button class="button is-primary" type="submit">Entrar</button>
 
         </div>
     </form>

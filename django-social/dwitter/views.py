@@ -26,7 +26,7 @@ def profile(request, pk):
     # return render(request, "dwitter/profile.html", {"profile": profile, "followers":get_followers(pk)})
 
 def login(request):
-    return render(request, "login.html")
+    return render(request, "dwitter/login.html")
 
 # solução alternativa para obter os seguidores,
 # utilizada antes de verificar a possibilidade de se usar o atributo related_name no model Profile
