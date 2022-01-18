@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import dashboard, profile_list, profile, login
+from .views import dashboard, profile_list, profile, login, submit_login
 
 app_name = "dwitter"
 
@@ -8,4 +8,5 @@ urlpatterns = [
     path("profile_list/", profile_list, name="profile_list"),
     path("profile/<int:pk>", profile, name="profile"),
     path("login/", login, name="login"),
+    path("login/submit", submit_login, name="submit_login")
 ]
