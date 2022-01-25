@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate, login, logout
 
 @login_required(login_url='/login/')
 def dashboard(request):
-    return render(request, "base.html")
+    return render(request, "dwitter/dashboard.html")
 
 @login_required(login_url='/login/')
 def profile_list(request):
