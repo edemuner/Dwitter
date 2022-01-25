@@ -31,7 +31,7 @@ def profile(request, pk):
     return render(request, "dwitter/profile.html", {"profile": profile})
     # return render(request, "dwitter/profile.html", {"profile": profile, "followers":get_followers(pk)})
 
-def login(request):
+def login_page(request):
     return render(request, "dwitter/login.html")
 
 def submit_login(request):
