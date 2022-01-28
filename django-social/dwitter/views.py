@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Profile
+from .forms import DweetForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
@@ -9,7 +10,8 @@ from django.contrib.auth import authenticate, login, logout
 
 @login_required(login_url='/login/')
 def dashboard(request):
-    return render(request, "dwitter/dashboard.html")
+    form = DweetForm()
+    return render(request, "dwitter/dashboard.html", {"form": form})
 
 @login_required(login_url='/login/')
 def profile_list(request):
