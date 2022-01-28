@@ -10,14 +10,13 @@ from django.contrib.auth import authenticate, login, logout
 
 @login_required(login_url='/login/')
 def dashboard(request):
+    form = DweetForm(request.POST or None)
     if request.method == "POST":
-        form = DweetForm(request.POST)
         if form.is_valid():
             dweet = form.save(commit=False)
             dweet.user = request.user
             dweet.save()
             return redirect("dwitter:dashboard")
-    form = DweetForm()
     return render(request, "dwitter/dashboard.html", {"form": form})
 
 @login_required(login_url='/login/')

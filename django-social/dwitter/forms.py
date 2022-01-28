@@ -11,6 +11,7 @@ class DweetForm(forms.ModelForm):
             }
         ),
         label="",
+        error_messages={'max_length':'Este dweet está muito longo! Observe o limite de 140 caracteres.'}
     )
 
     class Meta:
