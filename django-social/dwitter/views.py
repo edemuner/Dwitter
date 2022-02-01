@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Profile
+from .models import Profile, Dweet
 from .forms import DweetForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -17,7 +17,10 @@ def dashboard(request):
             dweet.user = request.user
             dweet.save()
             return redirect("dwitter:dashboard")
-    return render(request, "dwitter/dashboard.html", {"form": form})
+    followed_dweets = Dweet.objects.filter(
+        user__profile__in=request.user.profile.follows.all()
+    ).order_by("-created_at")
+    return render(request, "dwitter/dashboard.html", {"form": form, "dweets":followed_dweets})
 
 @login_required(login_url='/login/')
 def profile_list(request):
