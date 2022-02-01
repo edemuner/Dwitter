@@ -16,14 +16,35 @@
     </div>
 
     <div class="column is-one-third">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="button is-success is-fullwidth is-medium mt-5"
-                    type="submit">
-                Dweetar
-            </button>
-        </form>
+        <div class="block">
+            <a href="{% url 'dwitter:profile_list' %} ">
+                <button class="button is-dark is-outlined is-fullwidth">
+                    Todos os perfis
+                </button>
+            </a>
+        </div>
+        <div class="block">
+            <a href="{% url 'dwitter:profile' request.user.profile.id %} ">
+                <button class="button is-success is-light is-outlined is-fullwidth">
+                    Meu perfil
+                </button>
+            </a>
+        </div>
+        <div class="block">
+            <div class="block">
+                <h2 class="title is-2">Fazer um Dweet</h2>
+            </div>
+            <div class="block">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="button is-success is-fullwidth is-medium mt-5"
+                            type="submit">
+                        Dweetar
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
