@@ -34,7 +34,7 @@ def profile(request, pk):
         current_user_profile = request.user.profile
         data = request.POST
         action = data.get("follow")
-        if action == "follow":
+        if action == "follow" and current_user_profile != profile:
             current_user_profile.follows.add(profile)
         elif action == "unfollow":
             current_user_profile.follows.remove(profile)
