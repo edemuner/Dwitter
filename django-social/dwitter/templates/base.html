@@ -26,9 +26,11 @@
         <div class="column is-1">
             {% if user.is_authenticated %}
                 Olá, {{ user.username }}
-                <button class="button is-warning">
-                    Sair
-                </button>
+                <a href="{% url 'dwitter:logout' %}">
+                    <button class="button is-warning">
+                        Sair
+                    </button>
+                </a>
             {% else %}
                 tchau
             {% endif %}

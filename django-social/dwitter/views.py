@@ -57,6 +57,10 @@ def submit_login(request):
             messages.error(request, "Usuário ou senha inválidos")
     return redirect('/')
 
+def view_logout(request):
+    logout(request)
+    return redirect('/login')
+
 # solução alternativa para obter os seguidores,
 # utilizada antes de verificar a possibilidade de se usar o atributo related_name no model Profile
 # def get_followers(pk):
