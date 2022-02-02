@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="columns">
     <div class="column">
     {% for dweet in dweets %}
         <div class="box">
@@ -13,7 +12,7 @@
     {% endfor %}
     </div>
 
-    <div class="column is-one-third">
+    <div class="column">
         <div class="block">
             <a href="{% url 'dwitter:profile_list' %} ">
                 <button class="button is-dark is-outlined is-fullwidth">
@@ -44,6 +43,5 @@
             </div>
         </div>
     </div>
-</div>
 
 {% endblock content %}

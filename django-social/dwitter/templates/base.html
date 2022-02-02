@@ -11,6 +11,7 @@
     <title>Dwitter</title>
 </head>
 <body>
+
 <a href="{% url 'dwitter:dashboard' %}">
   <section class="hero is-small is-success mb-4">
     <div class="hero-body">
@@ -20,14 +21,23 @@
   </section>
 </a>
 
-  <div class="container">
-    <div class="collumns">
-
+<div class="container">
+    <div class="columns">
+        <div class="column is-1">
+            {% if user.is_authenticated %}
+                Olá, {{ user.username }}
+                <button class="button is-warning">
+                    Sair
+                </button>
+            {% else %}
+                tchau
+            {% endif %}
+        </div>
         {% block content %}
 
         {% endblock content %}
     </div>
-  </div>
+</div>
 
 <footer class="footer">
   <div class="content has-text-centered">
