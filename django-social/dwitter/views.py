@@ -64,6 +64,9 @@ def view_logout(request):
 def view_signup(request):
     return render(request, "dwitter/signup.html")
 
+
+# IMPLEMENTAR A OPÇÃO DE DELETAR DWEETS!
+
 # solução alternativa para obter os seguidores,
 # utilizada antes de verificar a possibilidade de se usar o atributo related_name no model Profile
 # def get_followers(pk):
