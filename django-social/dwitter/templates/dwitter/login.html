@@ -3,13 +3,13 @@
 {% block content %}
 <br><br>
 
-<h1 class="title is-1">Login</h1>
-<br><br>
+
 
 
     <form action="submit" method="POST">{% csrf_token %}
-         <div class="column is-one-third">
-
+         <div class="column is-two-thirds">
+             <h1 class="title is-1">Login</h1>
+            <br><br>
             <label class="title is-4">Usuário:</label>
             <input class="input is-primary" type="text" placeholder="E-mail cadastrado conosco" name="username">
             <br><br>
