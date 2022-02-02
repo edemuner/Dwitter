@@ -61,6 +61,9 @@ def view_logout(request):
     logout(request)
     return redirect('/login')
 
+def view_signup(request):
+    return render(request, "dwitter/signup.html")
+
 # solução alternativa para obter os seguidores,
 # utilizada antes de verificar a possibilidade de se usar o atributo related_name no model Profile
 # def get_followers(pk):

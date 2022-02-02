@@ -32,7 +32,7 @@
                     </button>
                 </a>
             {% else %}
-                tchau
+                Não tem cadastro?<br><a href="{% url 'dwitter:view_signup' %}">Registre-se!</a>
             {% endif %}
         </div>
         {% block content %}

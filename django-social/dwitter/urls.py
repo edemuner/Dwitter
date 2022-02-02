@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import dashboard, profile_list, profile, login_page, submit_login, view_logout
+from .views import dashboard, profile_list, profile, login_page, submit_login, view_logout, view_signup
 
 app_name = "dwitter"
 
@@ -10,4 +10,5 @@ urlpatterns = [
     path("login/", login_page, name="login_page"),
     path("login/submit", submit_login, name="submit_login"),
     path("logout/", view_logout, name="view_logout"),
+    path("signup/", view_signup, name="view_signup"),
 ]
