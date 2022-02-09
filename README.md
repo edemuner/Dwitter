@@ -1,7 +1,7 @@
 ## Dwitter
 
-Neste projeto foi desenvolvida uma rede social com uma interface simples e amigável, baseada no Twitter. 
+In this project I developed a Twitter-based social network, with a simple and friendly interface.
 
-Os usuários podem seguir uns aos outros, publicar pequenas postagens (até 140 caracteres) e visualizar as publicações dos usuários que seguem.
+Users can follow one another, publish small messages and see what the users they follow are posting.
 
-Ao visualizar o perfil de algum outro usuário, o usuário logado pode ver quem segue aquele perfil e quem aquele perfil segue.
+When visualizing someone else's profile, logged user can see who follows that profile, and who that profile follows.
